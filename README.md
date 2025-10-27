@@ -3,7 +3,6 @@ Web-API for [whoer.net](https://whoer.net/vpn) which is an application/extension
 
 ## Example
 ```cs
-using System;
 using WhoerVpnApi;
 
 namespace Application
