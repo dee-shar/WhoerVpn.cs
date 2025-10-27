@@ -27,6 +27,7 @@ namespace WhoerVpnApi
             var response = await httpClient.PostAsync($"{apiUrl}/info?code={accountCode}", null);
             return await response.Content.ReadAsStringAsync();
         }
+        
         public async Task<string> GetProxies()
         {
             var response = await httpClient.PostAsync($"{apiUrl}/proxies?code={accountCode}", null);
