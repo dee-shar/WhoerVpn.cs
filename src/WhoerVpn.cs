@@ -17,17 +17,17 @@ namespace WhoerVpnApi
                 new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
-        public async Task<string> LoginByCode(string accountCode)
+        public void LoginByCode(string code)
         {
-            accountCode = accountCode;
-            return accountCode;
+            this.accountCode = code;
         }
+
         public async Task<string> GetAccountInfo()
         {
             var response = await httpClient.PostAsync($"{apiUrl}/info?code={accountCode}", null);
             return await response.Content.ReadAsStringAsync();
         }
-        
+
         public async Task<string> GetProxies()
         {
             var response = await httpClient.PostAsync($"{apiUrl}/proxies?code={accountCode}", null);
